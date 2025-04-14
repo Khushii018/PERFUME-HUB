@@ -8,7 +8,7 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/khushii018/PERFUME-HUB.git
-   cd repository-name
+   cd PERFUME-HUB
    ```
 
 2. Install dependencies:
