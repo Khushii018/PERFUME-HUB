@@ -11,6 +11,17 @@ router.get('/',function(req,res){
     res.render('index',{error, loggedin:false});
 });
 
+router.get('/users/register',function(req,res){
+    let error=req.flash('error');
+    res.render('register',{error, loggedin:false});
+});
+
+router.get('/myaccount', function(req, res) {
+    let error = req.flash('error');
+    const user = req.user; // Assuming Passport or login middleware is used
+    res.render('account', { error, loggedin: true, user });
+});
+
 
 router.get('/shop', isLoggedin, async function(req, res) {
     try {
